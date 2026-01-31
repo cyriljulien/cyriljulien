@@ -35,6 +35,7 @@ Liste non exhaustive !
 
 Je suis toujours ouvert à discuter de nouvelles opportunités, de collaborations ou de projets. Si vous avez une question ou si vous souhaitez en savoir plus sur mes services avec **Socium Web**, n'hésitez pas à me contacter !
 
-- 🌐 [Visitez le site web de Socium Web](https://www.sociumweb.com)
+- 🌐 [Mon portfolio](https://www.cyriljulien.com)
+- 🌐 [Socium Web](https://www.sociumweb.com)
 - ✉️ [Envoyez-moi un e-mail](mailto:contact@sociumweb.com)
-- 💼 [Connectez-vous avec moi sur LinkedIn](https://www.linkedin.com/in/cj6)
+- 💼 [LinkedIn](https://www.linkedin.com/in/cyril-julien/)
