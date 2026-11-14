@@ -6,6 +6,7 @@ contributions.json : {"AAAA-MM-JJ": nombre, ...}
 """
 
 import base64
+import html
 import datetime as dt
 import io
 import json
@@ -83,7 +84,6 @@ def police(chemin: Path, texte: str, wght: int | None = None) -> str:
 
         f = instancer.instantiateVariableFont(f, {"wght": wght})
     opts = subset.Options()
-    opts.flavor = "woff2"
     opts.layout_features = ["kern", "liga"]
     s = subset.Subsetter(opts)
     s.populate(text=texte)
@@ -112,20 +112,29 @@ def svg(z, debut, fin, theme, polices, textes) -> str:
     sx, sy = ix * CELLULE + CELLULE / 2, iy * CELLULE + CELLULE / 2
     nb_sem = (fin - debut).days // 7 + 1
     sem = round((ix - 0.04 * NX) / (NX - 0.08 * NX) * (nb_sem - 1))
-    date_sommet = debut + dt.timedelta(weeks=max(sem, 0))
+    date_sommet = debut + dt.timedelta(weeks=min(max(sem, 0), nb_sem - 1))
     etiquette = f"SOMMET · {MOIS[date_sommet.month - 1]} {date_sommet.year}"
     # Repères de mois en pied de carte
     reperes = []
     j = dt.date(debut.year, debut.month, 1)
     while j <= fin:
-        if j >= debut:
-            x = (0.04 * NX + ((j - debut).days / 7) * (NX - 0.08 * NX) / (nb_sem - 1)) * CELLULE
+        x = (0.04 * NX + ((j - debut).days / 7) * (NX - 0.08 * NX) / (nb_sem - 1)) * CELLULE
+        if j >= debut and x < L - 80:
             reperes.append(
                 f'<line x1="{x:.1f}" y1="{H - 30}" x2="{x:.1f}" y2="{H - 22}" stroke="rgba({t["encre"]},0.45)" stroke-width="1"/>'
                 f'<text x="{x + 5:.1f}" y="{H - 21}" class="mono">{MOIS[j.month - 1]}</text>'
             )
         j = dt.date(j.year + (j.month == 12), j.month % 12 + 1, 1)
     gar, ita, mono = polices
+    textes = {k: html.escape(v) for k, v in textes.items()}
+    # Sommet : seulement hors du voile du titre ; étiquette sous le triangle s'il touche la légende.
+    if sx < 0.45 * L:
+        sommet = ""
+    else:
+        droite = sx < L - 320
+        ey = sy - 8 if sy > 110 else sy + 24
+        sommet = (f'<g transform="translate({sx:.1f},{sy:.1f})"><path d="M0,-7 L6,4 L-6,4 Z" fill="{t["accent"]}"/></g>'
+                  f'<text x="{sx + (12 if droite else -12):.1f}" y="{ey:.1f}" class="mono" text-anchor="{"start" if droite else "end"}" style="fill:{t["accent"]}">{etiquette}</text>')
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {L} {H}" width="{L}" height="{H}" role="img" aria-label="{textes['alt']}">
 <style>
 @font-face{{font-family:G;src:url(data:font/woff2;base64,{gar}) format('woff2')}}
@@ -144,8 +153,7 @@ text{{paint-order:stroke;stroke:{t['fond']};stroke-width:9px;stroke-linejoin:rou
 <rect width="{L}" height="{H}" fill="{t['fond']}"/>
 {''.join(lignes)}
 <rect width="{L}" height="{H}" fill="url(#voile)"/>
-<g transform="translate({sx:.1f},{sy:.1f})"><path d="M0,-7 L6,4 L-6,4 Z" fill="{t['accent']}"/></g>
-<text x="{sx + (12 if sx < L - 320 else -12):.1f}" y="{sy - 8:.1f}" class="mono" text-anchor="{'start' if sx < L - 320 else 'end'}" style="fill:{t['accent']}">{etiquette}</text>
+{sommet}
 <text x="56" y="66" class="mono">{textes['surtitre']}</text>
 <text x="52" y="168" style="font-family:G,Georgia,serif;font-size:96px;letter-spacing:-1.5px;fill:rgb({t['encre']})">Cyril Julien</text>
 <text x="56" y="214" style="font-family:GI,Georgia,serif;font-size:26px;fill:rgb({t['encre']})">{textes['phrase']}</text>
@@ -156,7 +164,7 @@ text{{paint-order:stroke;stroke:{t['fond']};stroke-width:9px;stroke-linejoin:rou
 
 
 def main():
-    contribs = json.loads(Path(sys.argv[1]).read_text())
+    contribs = json.loads(Path(sys.argv[1]).read_text()) or {}
     fonts, sortie = Path(sys.argv[2]), Path(sys.argv[3])
     sortie.mkdir(parents=True, exist_ok=True)
     fin = dt.date.fromisoformat(max(contribs)) if contribs else dt.date.today()

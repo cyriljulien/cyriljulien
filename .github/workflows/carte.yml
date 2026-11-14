@@ -1,9 +1,9 @@
 name: Carte de l'année
 
-# Chaque nuit : lit le calendrier de contributions du profil, recalcule le relief, publie les deux SVG.
+# Chaque lundi : lit le calendrier de contributions du profil, recalcule le relief, publie les deux SVG.
 on:
   schedule:
-    - cron: "17 3 * * *"
+    - cron: "17 3 * * 1"
   workflow_dispatch:
 
 permissions:
@@ -31,12 +31,15 @@ jobs:
           gh api graphql -f login="${{ github.repository_owner }}" -f query='
             query($login: String!) { user(login: $login) { contributionsCollection { contributionCalendar {
               weeks { contributionDays { date contributionCount } } } } } }' \
-            --jq '[.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[] | {(.date): .contributionCount}] | add' \
+            --jq '[.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[] | {(.date): .contributionCount}] | add // {}' \
             > contributions.json
-          total=$(jq '[.[]] | add' contributions.json)
+          total=$(jq '[.[]] | add // 0' contributions.json)
           echo "total=$total"
           # Sous ce seuil, le calendrier public ne compte pas les contributions privées : on garde la carte en place.
-          if [ "$total" -lt 200 ]; then echo "SAUTER=1" >> "$GITHUB_ENV"; fi
+          if [ "$total" -lt 200 ]; then
+            echo "::warning::Seulement $total contributions comptées : carte laissée en place (contributions privées masquées sur le profil ?)"
+            echo "SAUTER=1" >> "$GITHUB_ENV"
+          fi
 
       - name: Polices (EB Garamond, Geist Mono)
         if: env.SAUTER != '1'
@@ -59,4 +62,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/carte-claire.svg assets/carte-sombre.svg
-          git diff --cached --quiet || { git commit -m "Carte recalculée" && git push; }
+          git diff --cached --quiet || { git commit -m "Carte recalculée" && git pull --rebase && git push; }

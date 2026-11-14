@@ -3,7 +3,7 @@
   <img src="assets/carte-claire.svg" alt="Cyril Julien, fondateur de Socium Web. Carte en courbes de niveau de son année de travail." width="100%">
 </picture>
 
-<sub>Cette carte, c'est mon année de travail. Chaque journée sur GitHub soulève le terrain, l'équation de la chaleur lisse le relief, les courbes de niveau en font une carte. Elle se recalcule chaque nuit : un reste de mes années de physique.</sub>
+<sub>Cette carte, c'est mon année de travail. Chaque journée sur GitHub soulève le terrain, l'équation de la chaleur lisse le relief, les courbes de niveau en font une carte. Elle se recalcule chaque lundi : un reste de mes années de physique.</sub>
 
 Je dirige **[Socium Web](https://www.sociumweb.com)**, une agence web en Provence. On conçoit des sites qui font venir des clients, on les fait trouver sur Google, et on construit les outils qui font gagner du temps à ceux qui s'en servent. 40 projets à ce jour.
 
