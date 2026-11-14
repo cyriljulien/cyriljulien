@@ -1,19 +1,20 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/carte-sombre.svg">
-  <img src="assets/carte-claire.svg" alt="Cyril Julien, fondateur de Socium Web. Carte en courbes de niveau de son année de travail." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banniere-sombre.png">
+  <img src="assets/banniere-claire.png" alt="Cyril Julien, fondateur de Socium Web. Un site qui vous ressemble, et l'esprit tranquille." width="100%">
 </picture>
 
-<sub>Cette carte, c'est mon année de travail. Chaque journée sur GitHub soulève le terrain, l'équation de la chaleur lisse le relief, les courbes de niveau en font une carte. Elle se recalcule chaque lundi : un reste de mes années de physique.</sub>
+<br>
 
-Je dirige **[Socium Web](https://www.sociumweb.com)**, une agence web en Provence. On conçoit des sites qui font venir des clients, on les fait trouver sur Google, et on construit les outils qui font gagner du temps à ceux qui s'en servent. 40 projets à ce jour.
+Je dirige **[Socium Web](https://www.sociumweb.com)**, une agence web près d'Aix-en-Provence. On crée des sites qui vous ressemblent et qui transforment vos visiteurs en clients. Et le site n'est que le début : hébergement, mails, sécurité, suivi, on s'occupe de tout ce qui gravite autour pour vous libérer la tête.
 
 ## Ce qu'on fait
 
-- **Sites sur mesure**, en Next.js ou Nuxt, pensés pour convertir : le message, le design, la vitesse.
-- **Refontes et migrations** depuis WordPress ou Shopify, redirections et référencement compris.
-- **Référencement** : on part de Search Console, Ahrefs et PostHog, et on mesure ce que chaque changement rapporte.
-- **Outils métier et API** : tableaux de bord, automatisations, logiciels internes.
-- **Renfort technique pour les agences**, en marque blanche.
+- **Site vitrine** : votre présence professionnelle complète, sur mesure.
+- **Landing page** : une page de vente pour un lancement ou une offre.
+- **E-commerce** : votre boutique en ligne, avec paiement sécurisé et gestion des stocks.
+- **Application web** : espace client, tableau de bord, automatisations, sur devis.
+
+Un coup de main ponctuel ? **Socium Flash** pour débloquer une situation en une session, **Socium Time** pour des heures à la demande, **Socium Pass** pour avancer en continu. Les tarifs sont affichés sur [sociumweb.com/tarifs](https://www.sociumweb.com/tarifs).
 
 ## Réalisations
 
@@ -38,25 +39,40 @@ Je dirige **[Socium Web](https://www.sociumweb.com)**, une agence web en Provenc
 
 Les autres projets sont sur [sociumweb.com/projets](https://www.sociumweb.com/projets).
 
-## Comment on travaille
+## Comment ça se passe
 
-- **Mesurer avant de changer.** Les chiffres disent où agir, puis si ça a marché.
-- **Écrire la doctrine.** Copy, design, SEO, produit : les règles vivent dans des fichiers versionnés, que nos agents IA (Claude Code) lisent avant d'agir.
-- **Simplifier plutôt qu'ajouter.** Retirer un outil vaut souvent mieux qu'en brancher un de plus.
+1. **On commence par vous écouter.** Un premier échange offert pour comprendre votre activité, vos blocages et vos priorités.
+2. **Vous recevez un plan d'action.** Ce qu'on fait, dans quel ordre, et pour quel prix.
+3. **On crée votre site ensemble.** Un seul interlocuteur, et un espace client où vous suivez l'avancement, le temps passé et votre solde en temps réel.
+4. **On reste là.** Hébergement, mises à jour, sauvegardes, sécurité : vous n'avez plus à y penser.
 
-> « Il a pris le temps de comprendre les enjeux business derrière le site, pas seulement l'esthétique ou la technique. »
+## Ils en parlent
+
+> « Cyril ne s'est pas contenté d'exécuter. Il s'est investi à 2000 %. Il a pris le temps de comprendre les enjeux business derrière le site, pas seulement l'esthétique ou la technique. »
 >
-> <sub>Caroline Mignaux, entrepreneure, podcasteuse et LinkedIn Top Voice</sub>
+> **Caroline Mignaux**, entrepreneure, podcasteuse, LinkedIn Top Voice
 
-## Vous êtes
+> « Travailler avec Cyril est un vrai soulagement. Il m'accompagne au quotidien et son travail me fait gagner un temps précieux. »
+>
+> **Cristela de Oliveira**, Yunity Agency
 
-- **une entreprise dont le site ne rapporte pas assez** : [réservez un échange offert](https://calendly.com/socium_web/appel-decouverte) ;
-- **une agence qui cherche un renfort technique** : [écrivez à Socium Web](mailto:contact@sociumweb.com).
+> « On ne laisse plus traîner ces petits tracas du quotidien quand on a Cyril pour les régler en 1 h ! »
+>
+> **Coraline Deshaies**, Ta partenaire CEO
 
-## Aussi
+<br>
 
-Cofondateur de **[Valyo](https://www.valyo.immo)**, le logiciel immobilier des agences, avec Damien Bacon. Avant le web : les maths et la physique théorique, jusqu'à la modélisation numérique au CEA.
+<a href="https://calendly.com/socium_web/appel-decouverte"><img src="assets/bouton-rdv.png" width="288" alt="Réserver un échange offert"></a>
 
-<sub>Next.js · React · Nuxt · TypeScript · Node.js · NestJS · Laravel · PostgreSQL · Supabase · Vercel · Claude Code</sub>
+<a href="https://www.linkedin.com/in/cyril-julien/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/icones/linkedin-sombre.svg"><img src="assets/icones/linkedin-claire.svg" width="22" height="22" alt="LinkedIn"></picture></a> &nbsp;&nbsp; <a href="https://www.instagram.com/cyril__julien/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/icones/instagram-sombre.svg"><img src="assets/icones/instagram-claire.svg" width="22" height="22" alt="Instagram"></picture></a> &nbsp;&nbsp; <a href="https://www.cyriljulien.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/icones/site-sombre.svg"><img src="assets/icones/site-claire.svg" width="22" height="22" alt="cyriljulien.com"></picture></a> &nbsp;&nbsp; <a href="mailto:contact@sociumweb.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/icones/mail-sombre.svg"><img src="assets/icones/mail-claire.svg" width="22" height="22" alt="contact@sociumweb.com"></picture></a>
 
-[LinkedIn](https://www.linkedin.com/in/cyril-julien/) · [Instagram](https://www.instagram.com/cyril__julien/) · [cyriljulien.com](https://www.cyriljulien.com)
+<br>
+
+---
+
+<sub>Cofondateur de **[Valyo](https://www.valyo.immo)**, le logiciel immobilier des agences, avec Damien Bacon. Avant le web : les maths et la physique théorique, jusqu'à la modélisation numérique au CEA.</sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-sombre.svg">
+  <img src="assets/stack-claire.svg" alt="Next.js, React, Nuxt, TypeScript, Node.js, NestJS, Laravel, PostgreSQL, Supabase, Shopify, Sanity, Tailwind CSS, Vercel, Claude Code" width="560">
+</picture>
