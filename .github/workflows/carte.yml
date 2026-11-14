@@ -1,0 +1,62 @@
+name: Carte de l'année
+
+# Chaque nuit : lit le calendrier de contributions du profil, recalcule le relief, publie les deux SVG.
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: carte
+  cancel-in-progress: true
+
+jobs:
+  carte:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Contributions des douze derniers mois
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api graphql -f login="${{ github.repository_owner }}" -f query='
+            query($login: String!) { user(login: $login) { contributionsCollection { contributionCalendar {
+              weeks { contributionDays { date contributionCount } } } } } }' \
+            --jq '[.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[] | {(.date): .contributionCount}] | add' \
+            > contributions.json
+          total=$(jq '[.[]] | add' contributions.json)
+          echo "total=$total"
+          # Sous ce seuil, le calendrier public ne compte pas les contributions privées : on garde la carte en place.
+          if [ "$total" -lt 200 ]; then echo "SAUTER=1" >> "$GITHUB_ENV"; fi
+
+      - name: Polices (EB Garamond, Geist Mono)
+        if: env.SAUTER != '1'
+        run: |
+          mkdir -p polices
+          base=https://github.com/google/fonts/raw/main/ofl
+          curl -sfL -o "polices/EBGaramond[wght].ttf" "$base/ebgaramond/EBGaramond%5Bwght%5D.ttf"
+          curl -sfL -o "polices/EBGaramond-Italic[wght].ttf" "$base/ebgaramond/EBGaramond-Italic%5Bwght%5D.ttf"
+          curl -sfL -o "polices/GeistMono[wght].ttf" "$base/geistmono/GeistMono%5Bwght%5D.ttf"
+
+      - name: Relief
+        if: env.SAUTER != '1'
+        run: |
+          pip install --quiet numpy contourpy fonttools brotli
+          python carte/carte.py contributions.json polices assets
+
+      - name: Publier
+        if: env.SAUTER != '1'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/carte-claire.svg assets/carte-sombre.svg
+          git diff --cached --quiet || { git commit -m "Carte recalculée" && git push; }
