@@ -122,7 +122,7 @@ def svg(z, debut, fin, theme, polices, textes) -> str:
             x = (0.04 * NX + ((j - debut).days / 7) * (NX - 0.08 * NX) / (nb_sem - 1)) * CELLULE
             reperes.append(
                 f'<line x1="{x:.1f}" y1="{H - 30}" x2="{x:.1f}" y2="{H - 22}" stroke="rgba({t["encre"]},0.45)" stroke-width="1"/>'
-                f'<text x="{x + 4:.1f}" y="{H - 22}" class="mono">{MOIS[j.month - 1]}</text>'
+                f'<text x="{x + 5:.1f}" y="{H - 21}" class="mono">{MOIS[j.month - 1]}</text>'
             )
         j = dt.date(j.year + (j.month == 12), j.month % 12 + 1, 1)
     gar, ita, mono = polices
@@ -131,8 +131,8 @@ def svg(z, debut, fin, theme, polices, textes) -> str:
 @font-face{{font-family:G;src:url(data:font/woff2;base64,{gar}) format('woff2')}}
 @font-face{{font-family:GI;src:url(data:font/woff2;base64,{ita}) format('woff2')}}
 @font-face{{font-family:M;src:url(data:font/woff2;base64,{mono}) format('woff2')}}
-.mono{{font-family:M,ui-monospace,monospace;font-size:11px;letter-spacing:.14em;fill:{t['doux']}}}
-text{{paint-order:stroke;stroke:{t['fond']};stroke-width:7px;stroke-linejoin:round}}
+.mono{{font-family:M,ui-monospace,monospace;font-size:15px;letter-spacing:.12em;fill:{t['doux']}}}
+text{{paint-order:stroke;stroke:{t['fond']};stroke-width:9px;stroke-linejoin:round}}
 </style>
 <defs>
 <clipPath id="cadre"><rect x="0" y="0" width="{L}" height="{H}" rx="20"/></clipPath>
@@ -145,12 +145,12 @@ text{{paint-order:stroke;stroke:{t['fond']};stroke-width:7px;stroke-linejoin:rou
 {''.join(lignes)}
 <rect width="{L}" height="{H}" fill="url(#voile)"/>
 <g transform="translate({sx:.1f},{sy:.1f})"><path d="M0,-7 L6,4 L-6,4 Z" fill="{t['accent']}"/></g>
-<text x="{sx + 12:.1f}" y="{sy - 8:.1f}" class="mono" style="fill:{t['accent']}">{etiquette}</text>
-<text x="56" y="70" class="mono">{textes['surtitre']}</text>
+<text x="{sx + (12 if sx < L - 320 else -12):.1f}" y="{sy - 8:.1f}" class="mono" text-anchor="{'start' if sx < L - 320 else 'end'}" style="fill:{t['accent']}">{etiquette}</text>
+<text x="56" y="66" class="mono">{textes['surtitre']}</text>
 <text x="52" y="168" style="font-family:G,Georgia,serif;font-size:96px;letter-spacing:-1.5px;fill:rgb({t['encre']})">Cyril Julien</text>
 <text x="56" y="214" style="font-family:GI,Georgia,serif;font-size:26px;fill:rgb({t['encre']})">{textes['phrase']}</text>
 {''.join(reperes)}
-<text x="{L - 56}" y="70" class="mono" text-anchor="end">{textes['legende']}</text>
+<text x="{L - 56}" y="66" class="mono" text-anchor="end">{textes['legende']}</text>
 </g>
 </svg>"""
 
