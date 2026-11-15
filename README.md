@@ -20,18 +20,18 @@ Je dirige **[Socium Web](https://www.sociumweb.com)**, une agence web près d'Ai
 <table>
 <tr>
 <td width="50%" valign="top"><a href="https://www.carolinemignaux.com"><img src="assets/projets/caroline.webp" alt="Caroline Mignaux" width="100%"></a><br><b>Caroline Mignaux</b><br><sub>Le site de la fondatrice de l'Agence Personnelle · Next.js, Sanity</sub></td>
-<td width="50%" valign="top"><a href="https://www.marketingsquare.fr"><img src="assets/projets/marketingsquare.webp" alt="Marketing Square" width="100%"></a><br><b>Marketing Square</b><br><sub>Le site de son podcast · Next.js</sub></td>
+<td width="50%" valign="top"><a href="https://medxperformance.com"><img src="assets/projets/medx.webp" alt="MedX Performance" width="100%"></a><br><b>MedX Performance</b><br><sub>La santé des femmes dirigeantes, par une médecin interniste · Next.js</sub></td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://sereaum.com"><img src="assets/projets/sereaum.webp" alt="Sereaum" width="100%"></a><br><b>Sereaum</b><br><sub>La boutique d'eau de mer en cure · Next.js, Shopify</sub></td>
+<td width="50%" valign="top"><a href="https://www.ubayecanyoning.fr"><img src="assets/projets/ubaye.webp" alt="Ubaye Canyoning" width="100%"></a><br><b>Ubaye Canyoning</b><br><sub>Le canyoning dans les Alpes du Sud, en trois langues · Next.js</sub></td>
+</tr>
+<tr>
 <td width="50%" valign="top"><a href="https://www.valentinezeller.com"><img src="assets/projets/valentine.webp" alt="Valentine Zeller" width="100%"></a><br><b>Valentine Zeller</b><br><sub>Breathwork : séances, formation, boutique · Next.js</sub></td>
+<td width="50%" valign="top"><a href="https://www.marketingsquare.fr"><img src="assets/projets/marketingsquare.webp" alt="Marketing Square" width="100%"></a><br><b>Marketing Square</b><br><sub>Le site de son podcast · Next.js</sub></td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://lauralesueur.com"><img src="assets/projets/laura.webp" alt="Laura Lesueur" width="100%"></a><br><b>Laura Lesueur</b><br><sub>Conférencière, fondatrice du réseau The Circle · Next.js</sub></td>
-<td width="50%" valign="top"><a href="https://hop4lead.com"><img src="assets/projets/hop4lead.webp" alt="Hop4lead" width="100%"></a><br><b>Hop4lead</b><br><sub>Incubateur de performance collective · Next.js</sub></td>
-</tr>
-<tr>
-<td width="50%" valign="top"><a href="https://www.christinaaleixo.com"><img src="assets/projets/christina.webp" alt="Christina Aleixo" width="100%"></a><br><b>Christina Aleixo</b><br><sub>Stratégie marketing et neuromarketing · Nuxt, GSAP</sub></td>
 <td width="50%" valign="top"><a href="https://www.valyo.immo"><img src="assets/projets/valyo.webp" alt="Valyo" width="100%"></a><br><b>Valyo</b><br><sub>Le logiciel immobilier que j'ai cofondé : le site et l'appli · Next.js, Supabase</sub></td>
 </tr>
 </table>
