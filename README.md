@@ -9,9 +9,14 @@ Je dirige **[Socium Web](https://www.sociumweb.com)**, une agence web près d'Ai
 
 <table>
 <tr>
-<td width="33%" valign="top"><b>« Mon site ne me ramène pas de clients. »</b><br><br>Vous avez une activité : on crée le site qui la montre, et on s'occupe du reste.<br><br><a href="https://calendly.com/socium_web/appel-decouverte?utm_source=github&amp;utm_medium=profil&amp;utm_campaign=clients"><img src="assets/boutons/rdv.png" width="240" alt="Réserver un échange offert"></a></td>
-<td width="33%" valign="top"><b>« Je cherche quelqu'un de fiable pour un client. »</b><br><br>Vous êtes une agence, un consultant, un partenaire : présentez-nous, ou travaillons ensemble.<br><br><a href="https://www.sociumweb.com/contact?utm_source=github&amp;utm_medium=profil&amp;utm_campaign=partenaires"><img src="assets/boutons/partenaire.png" width="240" alt="Présenter un projet"></a></td>
-<td width="33%" valign="top"><b>« J'aimerais travailler avec vous. »</b><br><br>Socium Web va grandir, avec des profils curieux et polyvalents plus que des développeurs purs.<br><br><a href="mailto:contact@sociumweb.com?subject=Travailler%20avec%20Socium%20Web"><img src="assets/boutons/rejoindre.png" width="240" alt="Écrivez-moi"></a></td>
+<td width="33%" valign="top"><b>« Mon site ne me ramène pas de clients. »</b><br><br>Vous avez une activité : on crée le site qui la montre, et on s'occupe du reste.</td>
+<td width="33%" valign="top"><b>« Je cherche quelqu'un de fiable pour un client. »</b><br><br>Vous êtes une agence, un consultant, un partenaire : présentez-nous, ou travaillons ensemble.</td>
+<td width="33%" valign="top"><b>« J'aimerais travailler avec vous. »</b><br><br>Socium Web va grandir, avec des profils curieux et polyvalents plus que des développeurs purs.</td>
+</tr>
+<tr>
+<td width="33%"><a href="https://calendly.com/socium_web/appel-decouverte?utm_source=github&amp;utm_medium=profil&amp;utm_campaign=clients"><img src="assets/boutons/rdv.png" width="240" alt="Réserver un échange offert"></a></td>
+<td width="33%"><a href="https://www.sociumweb.com/contact?utm_source=github&amp;utm_medium=profil&amp;utm_campaign=partenaires"><img src="assets/boutons/partenaire.png" width="240" alt="Présenter un projet"></a></td>
+<td width="33%"><a href="mailto:contact@sociumweb.com?subject=Travailler%20avec%20Socium%20Web"><img src="assets/boutons/rejoindre.png" width="240" alt="Écrivez-moi"></a></td>
 </tr>
 </table>
 
