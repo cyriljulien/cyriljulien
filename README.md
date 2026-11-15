@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banniere-sombre.jpg">
-  <img src="assets/banniere-claire.jpg" alt="Cyril Julien, fondateur de Socium Web. Un site qui vous ressemble, et l'esprit tranquille." width="100%">
+  <img src="assets/banniere-claire.jpg" alt="Socium Web, par Cyril Julien, fondateur, à Aix-en-Provence. Un site qui vous ressemble, et l'esprit tranquille." width="100%">
 </picture>
 
 <br>
@@ -9,9 +9,9 @@ Je dirige **[Socium Web](https://www.sociumweb.com)**, une agence web près d'Ai
 
 <table>
 <tr>
-<td width="33%" valign="top"><b>« Mon site ne me ramène pas de clients. »</b><br><br>Vous avez une activité : on crée le site qui la montre, et on s'occupe du reste.<br><br><a href="#votre-activité">Ce qu'on fait ↓</a></td>
-<td width="33%" valign="top"><b>« Je cherche quelqu'un de fiable pour un client. »</b><br><br>Vous êtes une agence, un consultant, un partenaire : présentez-nous, ou travaillons ensemble.<br><br><a href="#agences-et-partenaires">Travailler ensemble ↓</a></td>
-<td width="33%" valign="top"><b>« Je suis développeur et je code avec Claude. »</b><br><br>Socium Web grandit en 2027 : voici comment on travaille, et comment nous rejoindre.<br><br><a href="#développeurs">Nous rejoindre ↓</a></td>
+<td width="33%" valign="top"><b>« Mon site ne me ramène pas de clients. »</b><br><br>Vous avez une activité : on crée le site qui la montre, et on s'occupe du reste.<br><br><a href="https://calendly.com/socium_web/appel-decouverte?utm_source=github&amp;utm_medium=profil&amp;utm_campaign=clients"><img src="assets/boutons/rdv.png" width="240" alt="Réserver un échange offert"></a></td>
+<td width="33%" valign="top"><b>« Je cherche quelqu'un de fiable pour un client. »</b><br><br>Vous êtes une agence, un consultant, un partenaire : présentez-nous, ou travaillons ensemble.<br><br><a href="https://www.sociumweb.com/contact?utm_source=github&amp;utm_medium=profil&amp;utm_campaign=partenaires"><img src="assets/boutons/partenaire.png" width="240" alt="Présenter un projet"></a></td>
+<td width="33%" valign="top"><b>« J'aimerais travailler avec vous. »</b><br><br>Socium Web va grandir, avec des profils curieux et polyvalents plus que des développeurs purs.<br><br><a href="mailto:contact@sociumweb.com?subject=Travailler%20avec%20Socium%20Web"><img src="assets/boutons/rejoindre.png" width="240" alt="Écrivez-moi"></a></td>
 </tr>
 </table>
 
@@ -24,7 +24,7 @@ Je dirige **[Socium Web](https://www.sociumweb.com)**, une agence web près d'Ai
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://sereaum.com"><img src="assets/projets/sereaum.webp" alt="Sereaum" width="100%"></a><br><b>Sereaum</b><br><sub>La boutique d'eau de mer en cure · Next.js, Shopify</sub></td>
-<td width="50%" valign="top"><a href="https://www.ubayecanyoning.fr"><img src="assets/projets/ubaye.webp" alt="Ubaye Canyoning" width="100%"></a><br><b>Ubaye Canyoning</b><br><sub>Le canyoning dans les Alpes du Sud, en trois langues · Next.js</sub></td>
+<td width="50%" valign="top"><a href="https://www.lilianemaibach.ch"><img src="assets/projets/liliane.webp" alt="Liliane Maibach" width="100%"></a><br><b>Liliane Maibach</b><br><sub>Stratégie marketing pour les PME de Suisse romande · Next.js</sub></td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://www.valentinezeller.com"><img src="assets/projets/valentine.webp" alt="Valentine Zeller" width="100%"></a><br><b>Valentine Zeller</b><br><sub>Breathwork : séances, formation, boutique · Next.js</sub></td>
@@ -68,17 +68,17 @@ Un coup de main ponctuel ? **Socium Flash** pour débloquer une situation en une
 >
 > **Coraline Deshaies**, Ta partenaire CEO
 
-<a href="https://calendly.com/socium_web/appel-decouverte"><img src="assets/bouton-rdv.png" width="288" alt="Réserver un échange offert"></a>
+<a href="https://calendly.com/socium_web/appel-decouverte?utm_source=github&amp;utm_medium=profil&amp;utm_campaign=activite"><img src="assets/boutons/rdv.png" width="240" alt="Réserver un échange offert"></a>
 
 ## Agences et partenaires
 
 Un de vos clients a besoin d'un site, d'une refonte ou d'un coup de main technique ? Présentez-nous : le premier échange est offert, sans engagement. Et si le projet se mène à plusieurs, on sait travailler aux côtés d'une agence, comme avec Pickbeam pour la coopérative VST.
 
-[Écrire à Socium Web](mailto:contact@sociumweb.com)
+<a href="https://www.sociumweb.com/contact?utm_source=github&amp;utm_medium=profil&amp;utm_campaign=partenaires"><img src="assets/boutons/partenaire.png" width="240" alt="Présenter un projet"></a>
 
-## Développeurs
+## Travailler avec nous
 
-Socium Web passe en agence en 2027, et cherche des développeurs qui aiment le travail soigné et codent avec Claude Code. Ici, on travaille comme ça :
+Socium Web va grandir. Les profils qui m'intéressent sont curieux et polyvalents plus que développeurs purs : à l'aise avec un client comme avec le code, et habitués à travailler avec Claude Code. Ici, on travaille comme ça :
 
 - **Une doctrine écrite.** Copy, design, SEO, produit : les règles vivent dans des fichiers versionnés, que les agents lisent avant d'agir.
 - **Mesurer avant de changer.** Search Console, PostHog et Ahrefs disent où agir, puis si ça a marché.
@@ -89,7 +89,9 @@ Socium Web passe en agence en 2027, et cherche des développeurs qui aiment le t
   <img src="assets/stack-claire.svg" alt="Next.js, React, Nuxt, TypeScript, Node.js, NestJS, Laravel, PostgreSQL, Supabase, Shopify, Sanity, Tailwind CSS, Vercel, Claude Code" width="560">
 </picture>
 
-Envie d'en être ? [Écrivez-moi](mailto:contact@sociumweb.com) avec un lien vers ce que vous avez construit.
+Ça vous parle ? Écrivez-moi, avec un lien vers ce que vous avez construit ou mené.
+
+<a href="mailto:contact@sociumweb.com?subject=Travailler%20avec%20Socium%20Web"><img src="assets/boutons/rejoindre.png" width="240" alt="Écrivez-moi"></a>
 
 ---
 
